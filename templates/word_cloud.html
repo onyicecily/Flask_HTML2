@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <h1>Generate WordCloud</h1>
+    <form class = 'grid' action ="/wordcloud/" method ="POST" >
+        <label for="artist">Enter artist name</label><br>
+        <input type="text" name="artist"><br><br>
+        <label for="song">Enter song title</label><br>
+        <input type="text" name="song"><br><br>
+        <input type="submit" value="Submit" id="run">
+    </form>
+    <img src="static/WordCloud.png" alt="WordCloud" width="50" height="50"/>
+    <button><a href="/">BACK</a></button>
+</html>

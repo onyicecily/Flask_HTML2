@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+</head>
+<body>
+    <h1>Lyrics Analyzer</h1>
+    <h1>Extract your lyrics</h1>
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    
+    <form class = 'grid' action ="/extract/" method ="POST" >
+        <label for="artist">Enter artist name</label><br>
+        <input type="text" name="artist"><br><br>
+        <label for="song">Enter song title</label><br>
+        <input type="text" name="song"><br><br>
+        <input type="submit" value="Submit" id="run">
+        <center>
+            {% if lyrics %}
+            <h3>Here is the lyrics<h3>
+            <p>{{lyrics}}<p>
+            {% endif %}
+        </center>
+        <button><a href="/">BACK</a></button>
+    </form>
+</html>
